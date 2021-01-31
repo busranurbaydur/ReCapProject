@@ -10,9 +10,11 @@ namespace ConsoleUI
         {
             CarManager carManager = new CarManager(new InMemoryCarDal());
 
+            Console.WriteLine( " ---KİRALIK ARAÇ LİSTESİ VE FİYATLARI--- ");
+
             foreach (var car in carManager.GetAll())
             {
-                Console.WriteLine(car.Description + " " + car.ModelYear + " " + " Model" + " " + car.DailyPrice + " " + " Bin TL ");
+                Console.WriteLine(car.Description + " " + car.ModelYear + " " + " Model Günlük Ücreti" + " " + car.DailyPrice + " TL " );
             }
 
             
