@@ -18,6 +18,8 @@ namespace Business.Concrete
         {
             _colorDal = colorDal;
         }
+
+        
         public IResult Add(Color color)
         {
             _colorDal.Add(color);
@@ -40,6 +42,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Color>>(_colorDal.GetAll(o=> o.ColorId == colorId),Messages.ColorIdListed);
         }
 
+      
         public IResult Update(Color color)
         {
             _colorDal.Update(color);
